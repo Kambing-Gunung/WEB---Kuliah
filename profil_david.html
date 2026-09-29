@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Wahyu Herdyansyah | VEE</title>
+  <style>
+    :root {
+      --red: #cf0000;
+      --soft-red: #fde6e6;
+      --blue: #1f63b7;
+      --ink: #242424;
+      --muted: #5f6672;
+      --line: #d8dde7;
+      --paper: #ffffff;
+      --bg: #f3f5f8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(960px, calc(100% - 32px));
+      margin: 28px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(30, 40, 55, 0.12);
+    }
+
+    header {
+      background: var(--red);
+      color: #ffffff;
+      padding: 28px 32px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 14px 32px;
+      background: var(--soft-red);
+      border-bottom: 1px solid #f7cccc;
+    }
+
+    nav a {
+      color: #b00000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px 32px 34px;
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      color: #1e2b3c;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .profile-photo {
+      width: 180px;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      object-fit: cover;
+      background: #c7d4e8;
+      border: 1px solid #b7c5dc;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f7f9fc;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .button-link,
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 0;
+      border-radius: 6px;
+      background: var(--red);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button-link:hover,
+    .button-link:focus,
+    button:hover,
+    button:focus {
+      background: #aa0000;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      max-width: 620px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-weight: 700;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #bdc5d1;
+      border-radius: 6px;
+      padding: 11px 12px;
+      font: inherit;
+      color: var(--ink);
+      background: #ffffff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    footer {
+      background: #2b2b2b;
+      color: #ffffff;
+      padding: 18px 32px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+      }
+
+      header,
+      nav,
+      main,
+      footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        width: 100%;
+        max-width: 220px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <h1>David Wahyu Herdyansyah</h1>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#hobi">Hobi</a>
+      <a href="#jadwal">Jadwal</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <main>
+      <section id="tentang" class="profile-grid">
+        <img class="profile-photo"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Crect width='360' height='360' fill='%23c7d4e8'/%3E%3Ccircle cx='180' cy='130' r='58' fill='%23849cc2'/%3E%3Cpath d='M74 315c16-68 63-104 106-104s90 36 106 104' fill='%23849cc2'/%3E%3C/svg%3E"
+          alt="Foto profil ilustrasi David Wahyu Herdyansyah, mahasiswa Rekayasa Perangkat Lunak">
+        <div>
+          <h2>Tentang Saya</h2>
+          <p>
+            Saya adalah mahasiswa tingkat akhir Program Studi Rekayasa Perangkat Lunak
+            di Telkom University Surabaya. Saya tertarik pada pengembangan perangkat
+            lunak, khususnya mobile development, web development, backend, dan game development.
+          </p>
+        </div>
+      </section>
+
+      <section id="hobi">
+        <h2>Hobi Saya</h2>
+        <p>Di waktu luang, saya suka melakukan beberapa kegiatan berikut:</p>
+        <ul>
+          <li>Mengembangkan game</li>
+          <li>Membuat aplikasi mobile</li>
+          <li>Membuat website dan bereksperimen dengan teknologi web</li>
+          <li>Vector illustration dan creative design</li>
+          <li>Street photography</li>
+          <li>Bermain game, terutama game bergenre roguelike</li>
+          <li>Naik gunung dan menikmati kegiatan outdoor</li>
+        </ul>
+      </section>
+
+      <section id="jadwal">
+        <h2>Jadwal Kuliah</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Hari</th>
+              <th scope="col">Mata Kuliah</th>
+              <th scope="col">Jam</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Senin</td>
+              <td>
+                Penulisan Proposal
+                <br />
+                Perancangan dan Pemrograman Web
+              </td>
+              <td>
+                13.30 - 15.30
+                <br />
+                15.30 - 18.30
+              </td>
+            </tr>
+            <tr>
+              <td>Selasa</td>
+              <td>Perancangan dan Pemrograman Web</td>
+              <td>14.30 - 17.30</td>
+            </tr>
+            <tr>
+              <td>Rabu</td>
+              <td>Pemodelan Perangkat Lunak</td>
+              <td>07.30 - 10.30</td>
+            </tr>
+            <tr>
+              <td>Kamis</td>
+              <td>Tidak ada mata kuliah</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Jumat</td>
+              <td>Tidak ada mata kuliah</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="tautan">
+        <h2>Tautan Profil</h2>
+        <p>Kunjungi tautan berikut untuk melihat referensi profil profesional dan proyek.</p>
+        <div class="links">
+          <a class="button-link" href="https://id.linkedin.com/in/davidntb" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button-link" href="https://github.com/Kambing-Gunung" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </section>
+
+      <section id="kontak">
+        <h2>Kontak Saya</h2>
+        <form action="#" method="post">
+          <label for="nama">
+            Nama
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+          </label>
+
+          <label for="email">
+            Email
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+          </label>
+
+          <label for="pesan">
+            Pesan
+            <textarea id="pesan" name="pesan" placeholder="Tulis pesanmu di sini" required></textarea>
+          </label>
+
+          <button type="submit">Kirim</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 David Wahyu Herdyansyah. Semua hak dilindungi.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
